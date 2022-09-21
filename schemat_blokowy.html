@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/test/style.css">
+</head>
+
+<body>
+    <fieldset>
+        <legend>Model blokowy CSS</legend>
+        <h1>Model blokowy CSS</h1>
+        <p>Wszystkie elementy projektowane w HTML można traktować jak odpowiednio sformatowane i rozmieszczone na
+            stronie prostokątne bloki.</p>
+        <p>Każdy z takich bloków posiada:</p>
+        <ul>
+            <li>margin - margines zewnętrzny, pusty obszar wokół ramki, nie ma koloru tła i jest przeźroczysty</li>
+            <li>border - obramowanie wokół zawartości elementu, ma styl i kolor</li>
+            <li>padding - odstęp pomiędzy obramowaniem a zawartością elementu</li>
+            <li>content - zawartość elementu</li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>Obramowanie</legend>
+        <h1>Obramowanie</h3>
+            <p>
+                <b>Szerokość obramowania</b> border-width
+            </p>
+            <code>
+            border-width: wartość;
+        </code>
+            <p>Ustawienie atrybutu: </p>
+            <ul>
+                <li>1 wartość - jednakowa szerokość dla wszystkich krawędzi</li>
+                <li>2 wartości - ustawienie szerokości dla kolejno obu poziomych i obu pionowych krawędzi</li>
+                <li>3 wartości - pierwsza wartość określa szerokość krawędzi górnej, druga krawędzie pionowe, a trzecia
+                    krawędzi dolnej</li>
+                <li>4 wartości - góra, prawo, dół, lewo</li>
+            </ul>
+            <p>
+                Szerokość krawędzi może być definiowana w dowolnych jednostkach lub za pomocą trzech wartości:
+            </p>
+            <ul>
+                <li>thin</li>
+                <li>medium</li>
+                <li>thick</li>
+            </ul>
+
+            <br>
+            <h3>Styl obramowania</h3>
+            <p>Podobnie jak w przypadku definiowania szerokości możemy definiować jedną, dwie, trzy lub cztery wartości
+                oddzielnie.</p>
+            <p>Wartości atrybutu border-style:</p>
+            <ul>
+                <li>none - brak obramowania</li>
+                <li>hidden - obramowanie ukryte</li>
+                <li>dotted - obramowanie kropkowane</li>
+                <li>dashed - obramowanie kreskowane</li>
+                <li>double - podwójny</li>
+                <li>groove - 3D rowki </li>
+                <li>ridge - 3D grzbiety</li>
+                <li>inset - ramka</li>
+                <li>outset - odwrotna ramka</li>
+            </ul>
+            <p>Aby ramka była widoczna podajemy styl i szerokość.</p>
+
+            <br>
+            <h3>Kolor obramowania</h3>
+            <p>Podobnie jak w przypadku innych atrybutów możliwe jest podanie jednej, dwóch, trzech lub czterech
+                wartości,
+                lub zdefiniowanie kolorów dla poszczególnych krawędzi.</p>
+            <p>Jako wartości koloru można używać: </p>
+            <ul>
+                <li>Kodu heksadecymalnego</li>
+                <li>Kodu RGB</li>
+                <li>Predefiniowanych nazw kolorów</li>
+            </ul>
+
+            <br>
+            <h3>Przykład:</h3>
+
+            <fieldset>
+                <style>
+                    .border-div {
+                        display: block;
+                        margin-top: 10px;
+                        padding: 2px;
+                    }
+
+                    .border-div p {
+                        display: block;
+                    }
+
+                    .border-div:nth-of-type(1) {
+                        border: 3px inset black;
+                    }
+
+                    .border-div:nth-of-type(2) {
+                        border: 2px dotted blue;
+                    }
+
+                    .border-div:nth-of-type(3) {
+                        border-width: 5px;
+                        border-style: solid;
+                        border-color: red blue green yellow;
+                    }
+
+                    ;
+                </style>
+
+                <div class="clear">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <div class="border-div">
+                        <p id="border-p">Lorem ipsum dolor sit amet.</p>
+                    </div>
+
+                    <div class="border-div">
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+
+                    <div class="border-div">
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Officia consequuntur pariatur consectetur saepe.</p>
+                        <p>Porro laborum reiciendis ea dolor!</p>
+                    </div>
+                </div>
+
+            </fieldset>
+    </fieldset>
+
+    <fieldset>
+        <legend>Marginesy</legend>
+        <h1>Marginesy</h1>
+        <h3>Margines zewnętrzny (margin)</h3>
+        <p>Margines zewnętrzny określa przestrzeń wokół definiowanego elementu. Przestrzeń ta oddziela dany element
+            od innych elementów strony.</p>
+
+        <code><pre>selektor {
+            margin-top / bottom / left / right: wartość;
+         }</pre></code>
+
+        <p>Szerokości marginesów zewnętrznych możemy definiować pojedyńczo dla każdej strony, całościowo dla
+            wszystkich lub też dla wszystkich, podając jedną, dwie, trzy lub cztery wartości.</p>
+        <p>Rozmiar marginesu podawany jest w jednostkach długości (px, cm, in) lub jako rozmiar <code>auto</code>
+        </p>
+
+
+        <h3>Margines wewnętrzny (padding)</h3>
+        <p>Margines wewnętrzny to odległość pomiędzy zawartością elementu a jego obramowaniem.</p>
+        <code><pre>selektor {
+            padding-top / bottom / left / right): wartość;
+         }</pre></code>
+        <p>Podobnie jak dla marginesów zewnętrznych można definiować rozmiary wszystkich stron marginesu lub każdą
+            oddzielnie.</p>
+
+        <h3>Przykład:</h3>
+
+        <fieldset>
+            <style>
+                #margines-container p {
+                    display: block;
+                }
+
+                #margines-container p:nth-of-type(1) {
+                    background-color: bisque;
+                    padding: 10px
+                }
+
+                #margines-container p:nth-of-type(2) {
+                    background-color: darkseagreen;
+                    margin: 10px
+                }
+
+                #margines-container p:nth-of-type(3) {
+                    background-color: darksalmon;
+                    padding: 10px 0px;
+                }
+
+                #margines-container p:nth-of-type(4) {
+                    background-color: darkkhaki;
+                    margin: 10px 20px;
+                }
+
+                #margines-container p:nth-of-type(5) {
+                    background-color: darkslategray;
+                    padding: 10px 0px;
+                    margin: 20px 10px
+                }
+            </style>
+
+            <div id="margines-container" class="clear">
+                <p>Lorem, ipsum.</p>
+                <p>Lorem, ipsum dolor.</p>
+                <p>Ex, temporibus molestiae.</p>
+                <p>Vel, praesentium modi!</p>
+                <p>Aliquid, itaque maiores.</p>
+            </div>
+
+        </fieldset>
+    </fieldset>
+    <fieldset>
+        <legend>Obrys</legend>
+        <h1>Obrys</h1>
+        <p>Obramowanie wokół elementu może być tworzone poprzez zdefiniowanie <i>obrysu.</i></p>
+        <p>Obrys różni się od obramowania tym że:</p>
+        <ul>
+            <li>nie zajmuje miejsca, przez co nie wpływa na rozmiar i położenie elementu</li>
+            <li>jest stworzony na wierzchu elementu </li>
+            <li>jest definiowany dla wszystkich krawędzi jednocześnie</li>
+        </ul>
+        <code><pre>selektor { 
+            outline: wartości;
+         }</pre></code>
+
+        <p>Możemy w tym atrybucie określić kolor, styl i szerokość obrysu.</p>
+        <p>Żeby obrys wyświetlał się, obowiązkowo musimy podać styl.</p>
+
+        <h3>Przykład</h3>
+        <fieldset>
+            <style>
+                #obrys-container {
+                    display: block;
+                }
+
+                #obrys-container p:nth-of-type(1) {
+                    outline: 3px solid black;
+                }
+
+                #obrys-container p:nth-of-type(2) {
+                    border: 3px solid black;
+                }
+            </style>
+
+            <div id="obrys-container" class="clear">
+                Outline:
+                <p>Lorem ipsum dolor sit amet.</p>
+                <br> <br>
+                Border:
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+
+        </fieldset>
+    </fieldset>
+    <fieldset>
+        <legend>Rozmiary elementów</legend>
+        <h3>Rozmiary elementów</h3>
+        <p>W modelu blokowym można ustalić dokładne rozmiary różnych elementów, na przykład akapitu, diva, itp.</p>
+        <p>Atrybuty rozmiaru:</p>
+        <ul>
+            <li>width - szerokość</li>
+            <li>min-width - szerokość minimalna</li>
+            <li>max-width - szerokość maksymalna</li>
+            <li>height - wysokość</li>
+            <li>min-height - wysokość minimalna</li>
+            <li>max-height - wysokość maksymalna</li>
+        </ul>
+
+        <h3>Przykład:</h3>
+        <fieldset>
+            <style>
+                #img-container {
+                    display: block;
+                }
+
+                #img-container div {
+                    display: inline-block;
+                    text-align: center;
+                }
+
+                #img-container div img {
+                    height: 100%;
+                }
+
+                #img-container div:nth-of-type(1) {
+                    height: 200px;
+                }
+
+                #img-container div:nth-of-type(2) {
+                    margin-left: 200px;
+                    height: auto;
+                }
+            </style>
+
+            <div id="img-container">
+                <div>
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Felis_catus-cat_on_snow.jpg/640px-Felis_catus-cat_on_snow.jpg">
+                    <p>height: 200px</p>
+                </div>
+
+                <div>
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Felis_catus-cat_on_snow.jpg/640px-Felis_catus-cat_on_snow.jpg">
+                    <p>height: auto</p>
+                </div>
+            </div>
+
+        </fieldset>
+    </fieldset>
+    <fieldset>
+        <legend>Przepełnienie</legend>
+        <h3>Przepełnienie</h3>
+        <p>Jeżeli zawartość elementu nie mieści się w podanych rozmiarach możliwe jest ukrycie niemieszczącej się
+            zawartości, powiększenie rozmiaru elementu lub wyświetlenie suwaków, które pozwolą na obejrzenie całej
+            zawartości elementu.</p>
+        <code><pre>selektor {
+            overflow: visible / hidden / scroll
+         }</pre></code>
+        <br>
+
+        <p>Możliwe wartości atrybutu overflow:</p>
+        <ul>
+            <li>visible - niezależnie od rozmiaru rodzica, element jest widoczny</li>
+            <li>hidden - treść niemieszcząca się w zdefiniowanym rozmiarze zostaje ukryta</li>
+            <li>scroll - powoduje przepełnienie i dodanie paska przewijania, który pozwoli na obejrzenie zawartości
+                wewnątrz bloku, pasek zostaje dodany w pionie i poziomie</li>
+            <li>auto - automatycznie, jeżeli jest to konieczne, suwaki zostają wyświetlone</li>
+        </ul>
+        <h3>Przykład:</h3>
+        <fieldset>
+            <style>
+                #overflow-container > div > div{
+                    display: inline-block;
+                    margin-top: 10px;
+                    height: 200px;
+                    border: 1px solid coral;
+                }
+
+                #overflow-container > div {
+                    margin-left: 50px;
+                    display: inline-block;
+                    text-align: center;
+                }
+
+                #overflow-container img {
+                    height: 250px;
+                }
+
+                #overflow-1
+                {
+                    overflow: visible;
+                }
+
+                #overflow-2
+                {
+                    overflow: scroll;
+                }
+
+                #overflow-3
+                {
+                    overflow: hidden;
+                }
+                #overflow-4
+                {
+                    overflow: auto;
+                }
+            </style>
+            <div id="overflow-container">
+                <div>
+                    <div id="overflow-1"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Felis_catus-cat_on_snow.jpg/640px-Felis_catus-cat_on_snow.jpg">
+                    </div>
+                    <p>overflow: visible</p>
+                </div>
+
+                <div>
+                    <div id="overflow-2"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Felis_catus-cat_on_snow.jpg/640px-Felis_catus-cat_on_snow.jpg">
+                    </div>
+                    <p>overflow: scroll</p>
+                </div>
+
+                <div>
+                    <div id="overflow-3"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Felis_catus-cat_on_snow.jpg/640px-Felis_catus-cat_on_snow.jpg">
+                    </div>
+                    <p>overflow: hidden</p>
+                </div>
+
+                <div>
+                    <div id="overflow-4"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Felis_catus-cat_on_snow.jpg/640px-Felis_catus-cat_on_snow.jpg">
+                    </div>
+                    <p>overflow: auto</p>
+                </div>
+
+            </div>
+        </fieldset>
+    </fieldset>
+    </fieldset>
+
+</body>
+
+</html>

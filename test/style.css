@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: coral;
+}
+
+#container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+header,
+section,
+footer {
+    width: 100vw;
+    margin: 0;
+}
+
+header,
+footer {
+    outline: 1px solid coral;
+    outline-offset: -4px;
+}
+
+header {
+    height: 5.5vh;
+    font-size: 20px;
+}
+
+header span {
+    font-size: 35px;
+}
+
+
+#header-left {
+    float: left;
+    height: 100%;
+}
+
+header span {
+    font-size: 39px;
+    margin: 0px 6px 0px 15px;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 1px coral;
+    color: white;
+}
+
+section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+body>fieldset {
+    margin-bottom: 40px;
+}
+fieldset fieldset 
+{
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+fieldset {
+    font-size: 13px;
+    border: 1px solid coral;
+}
+
+body>fieldset {
+    border-top: 3px double;
+}
+
+body>fieldset>legend {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+code {
+    margin: 0;
+}
+
+fieldset>code,
+fieldset fieldset code {
+    display: inline-block;
+    margin: 7px 0px 7px 10px;
+    padding: 2px 10px;
+    background-color: rgba(204, 93, 52, 0.11);
+}
+
+fieldset h1 {
+    margin-bottom: 5px;
+}
+
+legend {
+    margin-left: -8px;
+    padding: 0px 10px;
+    letter-spacing: 3px;
+    text-transform: lowercase;
+}
+
+#img-top {
+    height: 23%;
+    border-bottom: 2px dotted coral;
+}
+
+#img-header {
+    display: block;
+    width: 30%;
+    margin: 15px 0px 2px 0px;
+    float: left;
+}
+
+#img-header p {
+    margin: 5px 0px 5px 5px
+}
+
+#img-flag {
+    display: block;
+    width: 30%;
+    height: 80px;
+    margin: 10px 5px 0px 0px;
+    float: right;
+}
+
+#img-flag img {
+    float: right;
+    height: 100%;
+}
+
+#img-container {
+    clear: both;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px 5px;
+    height: 325px;
+    width: 490px;
+    outline: 1px solid coral;
+    background-color: rgb(146, 51, 7);
+    color: wheat;
+    padding: 3px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.img img {
+    height: 93%;
+}
+
+.img span {
+    display: inline-block;
+}
+
+form label {
+    margin-right: 5px;
+    float: left;
+}
+
+#form-container {
+    width: 200px;
+}
+
+#form-container input {
+    float: right;
+    border: 1px solid coral;
+}
+
+fieldset h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Merriweather', serif;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+fieldset h1:first-of-type, h2:first-of-type, h3:first-of-type
+{
+    margin-top: 5px;
+}
+fieldset ul,
+ol {
+    margin-top: -6px;
+    margin-bottom: 20px;
+}
+
+ol ol,
+ul ul,
+ul ol,
+ol ul {
+    margin: auto;
+}
+
+fieldset .table-winter
+{
+    border-collapse: collapse;
+}
+fieldset .table-winter *
+{
+    border: 1px darkslategray solid; 
+    padding: 2px 10px;
+}
+fieldset .table-winter th
+{
+    font-family: 'Merriweather', serif;
+    font-weight: 500;
+    text-align: left;
+    color: lavender;
+    font-size: 15px;
+    letter-spacing: 3px;
+    background-color: seagreen;
+}
+fieldset .table-winter tr
+{
+    color: darkslategrey;
+    background-color: aliceblue;
+}
+fieldset .table-winter tr:nth-of-type(odd)
+{
+    background-color: lavender;
+}
+
+.button {
+    background-color: transparent;
+    color: coral;
+    border: 1px coral solid;
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+
+}
+
+.button:hover {
+    background-color: coral;
+    color: white;
+}
+
+.button:active {
+    transition: 0.1s;
+    background-color: rgb(155, 74, 44);
+    color: wheat;
+}
+
+footer {
+    height: 3vh;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    line-height: 3vh;
+}
+
+.clear * {
+    all: initial;
+}

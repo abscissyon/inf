@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/test/style.css">
+</head>
+
+<body>
+    <fieldset>
+        <legend>Listy</legend>
+        <h1>Listy</h1>
+        <p>Lista:</p>
+        <ol type="I">
+            <li>Punkt 1</li>
+            <li>Punkt 2</li>
+            <li>Punkt 3
+                <ol type="a">
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Corporis aliquam assumenda impedit maxime.</li>
+                    <li>Ullam non tempora animi id!</li>
+                </ol>
+            </li>
+        </ol>
+
+        <h1>Styl listy</h1>
+        <h2>Typ punktora</h2>
+        <p>Składnia:</p>
+        <code><pre> selektor {
+            list-style-type: typ;
+          }</pre></code>
+        <p>Typy punktorów:</p>
+        <ul>
+            <li>disc - koło</li>
+            <li>circle - okrąg</li>
+            <li>square - kwadrat</li>
+            <li>decimal - liczby arabskie</li>
+            <li>lower-roman - liczby małe rzymskie</li>
+            <li>upper-roman - liczbe duże rzymskie</li>
+            <li>lower-alpha - małe litery</li>
+            <li>upper-alpha - duże litery</li>
+            <li>none - brak punktora</li>
+        </ul>
+        <p>Selektorami mogą być znaczniki definiujące listy (ul, li)</p>
+        <p>Parametr <code>type</code> określa wygląd punktora</p>
+        <br>
+        <h2>Przykład:</h2>
+        <fieldset>
+            <style>
+                #list-container ol:nth-of-type(1) {
+                    list-style-type: upper-roman;
+                }
+
+                #list-container ol:nth-of-type(2) {
+                    list-style-type: lower-alpha;
+                }
+
+                #list-container ol:nth-of-type(3) {
+                    list-style-type: georgian;
+                }
+
+                #list-container ol:nth-of-type(4) {
+                    list-style-type: armenian;
+                }
+
+                #list-container ol:nth-of-type(5) {
+                    list-style-type: decimal-leading-zero;
+                }
+
+                #list-container ol:nth-of-type(6) {
+                    list-style-type: disc;
+                }
+            </style>
+            <div id="list-container">
+                <p>Lista:</p>
+                <ol>
+                    <li>Punkt 1</li>
+                    <li>Punkt 2</li>
+                    <li>Punkt 3
+                        <ol>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Corporis aliquam assumenda impedit maxime.</li>
+                            <li>Ullam non tempora animi id!</li>
+                        </ol>
+                    </li>
+                </ol>
+
+                <p>Lorem, ipsum.</p>
+                <ol>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Porro alias optio enim.</li>
+                    <li>Rem quibusdam eum ex.</li>
+                </ol>
+                <p>Incidunt, ullam.</p>
+                <ol>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Sequi earum atque inventore?</li>
+                    <li>Sapiente fuga ipsum autem?</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Molestias ratione tempora minus.</li>
+                    <li>Veniam eaque adipisci modi.</li>
+                </ol>
+                <p>Tenetur, accusantium!</p>
+                <ol>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Corrupti, totam corporis? Blanditiis?</li>
+                    <li>Laudantium at adipisci temporibus?</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Cum, amet. Nobis, adipisci.</li>
+                    <li>Ipsa hic vero porro.</li>
+                </ol>
+                <p>Alias, nam.</p>
+                <ol>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>In nobis eligendi aliquid!</li>
+                    <li>Temporibus est perspiciatis veritatis?</li>
+                </ol>
+                <p>Maxime, incidunt!</p>
+                <ol>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Impedit sequi adipisci minus.</li>
+                    <li>Itaque hic dolorum voluptatem.</li>
+                </ol>
+            </div>
+        </fieldset>
+
+        <p>Punktorem listy może być również obrazek zapisany w pliku.</p>
+        <p>Składnia: </p>
+        <code>
+    <pre>selektor {
+            list-style-image: url(ścieżka dostępu);
+         }
+    </pre>
+        </code>
+
+        <h2>Pozycja punktora</h2>
+        <p>Oprócz typu punktora można również ustawić jego położenie względem tekstu.</p>
+        <p>Składnia:</p>
+        <code>
+            <pre>selektor {
+            list-style-position: inside/outside;
+         }</pre>
+        </code>
+
+        <p>Wartości atrybutu:</p>
+        <ul>
+            <li>inside - punktor pojawia się wewnątrz zawartości </li>
+            <li>outside - punktor pojawia się na zewnątrz zawartości/li>
+        </ul>
+
+        <p>Przykład</p>
+        <fieldset>
+            <style>
+                #list-2-container li {
+                    border: 1px solid;
+                    padding: 2px;
+                    margin-bottom: 5px;
+                }
+
+                #list-2-container ul:nth-of-type(1) {
+                    list-style-position: inside;
+                }
+
+                #list-2-container ul:nth-of-type(2) {
+                    list-style-position: outside;
+                }
+            </style>
+            <div id="list-2-container">
+                <p><code>list-style-position: inside;</code></p>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi rem excepturi ducimus id
+                        quibusdam corporis accusantium consequuntur?</li>
+                    <li>Deserunt nemo assumenda recusandae nam! Alias tenetur qui nostrum debitis, amet hic voluptatum
+                        asperiores velit. Sed, voluptatibus!</li>
+                    <li>Eius repellat a quibusdam saepe. Perferendis aliquam nisi ab provident nobis. Doloremque
+                        expedita quae nisi rem similique.</li>
+                </ul>
+                <p><code>list-style-position: outside;</code></p>
+                <ul>
+                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores totam ducimus incidunt
+                        perspiciatis. Fuga distinctio laboriosam consequatur!</li>
+                    <li>Et eveniet ex eum cumque nostrum voluptate aliquid itaque natus cupiditate officia deleniti
+                        totam, perspiciatis asperiores ipsam!</li>
+                    <li>Expedita quis exercitationem voluptatum. Non, modi quibusdam cum doloribus voluptatem, totam,
+                        iure natus delectus debitis quas esse!</li>
+                </ul>
+                <p>Consectetur molestias voluptate autem cumque?</p>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius enim non odit culpa qui incidunt
+                        beatae adipisci!</li>
+                    <li>Sunt, maiores ea aliquid aliquam quia rem aut deleniti, est consectetur quasi odio aspernatur
+                        provident dolorem libero.</li>
+                    <li>Perspiciatis itaque et dolorem ad reprehenderit magnam quidem magni quam, vitae delectus iure
+                        necessitatibus minima tempora temporibus.</li>
+                </ul>
+            </div>
+        </fieldset>
+    </fieldset>
+    <fieldset>
+        <legend>Tabele</legend>
+        <p> Przykładowa tabela: </p>
+        <fieldset>
+            <table class="table-winter">
+                <tr>
+                    <th>Lorem.</th>
+                    <th>Vitae?</th>
+                    <th>Est?</th>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Laborum et sit voluptatem mollitia!</td>
+                    <td>Eius iusto aut reprehenderit hic?</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Architecto illum iste veritatis maxime?</td>
+                    <td>Ab, et dolorem. Dicta, neque.</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Expedita enim totam atque harum!</td>
+                    <td>Fugiat facere suscipit dolorem iste!</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Placeat non minus ipsum fuga?</td>
+                    <td>Necessitatibus totam quas aspernatur qui.</td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <h2>Podpis</h2>
+        <p>W celu określenia położenia podpisu dodanego do tabeli używamy atrybutu <code>caption-side</code>.</p>
+        <p>Składnia:</p>
+        <code>
+            <pre>selektor {
+            caption-side: wartości;
+         }</pre>
+        </code>
+
+        <p>Możliwe wartości:</p>
+        <ul>
+            <li>top</li>
+            <li>bottom</li>
+            <li>left</li>
+            <li>right</li>
+        </ul>
+
+        <p>Można określić również sposób obramowania dla pustych komórek.</p>
+        <code>
+            <pre>selektor {
+            empty-cells: show/hide;
+         }</pre>
+        </code>
+
+        <h2>Table layout</h2>
+        <p>Do rozplanowania tabeli na stronie można użyć atrybutu <code>table-layout</code></p>
+        <p>Atrybut ten przyjmuje następujące wartości</p>
+        <ul>
+            <li>auto - szerokość tabeli jest ustawiana automatycznie i zależy od zawartości</li>
+            <li>fixed - szerokość tabeli jest stała i wynika z zadeklarowanej szerkości poszczególnych komórek oraz
+                szerokości całej tabeli</li>
+        </ul>
+
+        <h2>Odstępy między komórkami</h2>
+        <p>Odstęp podajemy w jednostkach długości. Można podać jedną lub dwie wartości.</p>
+
+        <p>Składnia:</p>
+        <code>
+            <pre>selektor {
+            border-spacing: odstęp;
+         }</pre>
+        </code>
+
+        <h2>Szerokość i wysokość tabeli</h2>
+        <p>Składnia</p>
+        <code>
+            <pre>selektor {
+            height: wartość;
+            width: wartość;
+         }</pre>
+        </code>
+
+        <h1>Zadanie</h1>
+        <p>Zaprojektuj tabelę w której szerokość całkowita tabeli będzie wynosiła 100%. </p>
+        <p>Formatowanie znaczników table, td i tr: obramowanie 2 piksele, linia ciągła, kolor niebieskim, obramowanie
+            pojedyńcze i rozmieszczenie z wartością fixed.</p>
+        <p>Formatowanie dla znacznika th: obramowanie 2 piksele, linia ciągła, kolor czerwony, obramowanie pojedyńcze,
+            wysokość 50 pikseli.</p>
+
+        <fieldset>
+            <style>
+                #table-zadanie {
+                    border-collapse: collapse;
+                    table-layout: fixed;
+                    width: 100%;
+                    color: initial;
+                    font-family: initial;
+                    font-size: initial;
+                }
+
+                #table-zadanie,
+                #table-zadanie td,
+                #table-zadanie tr {
+                    border: 2px solid blue;
+                }
+
+                #table-zadanie th {
+                    height: 50px;
+                    border: 2px solid red;
+                }
+            </style>
+            <table id="table-zadanie">
+                <tr>
+                    <th>Lorem.</th>
+                    <th>Provident.</th>
+                    <th>Magni?</th>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Beatae obcaecati eveniet facilis tenetur.</td>
+                    <td>Dolorem aut consequuntur dignissimos nobis.</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Et optio magni laudantium quidem.</td>
+                    <td>Enim fugit dolore cupiditate molestias.</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Amet inventore quaerat nesciunt iusto.</td>
+                    <td>Iure totam blanditiis corrupti aut!</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Beatae quidem iste minima itaque!</td>
+                    <td>At id ab quis minima.</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Aliquam accusantium nemo officia similique.</td>
+                    <td>Recusandae dolor doloremque in minima?</td>
+                </tr>
+            </table>
+        </fieldset>
+    </fieldset>
+
+    <fieldset>
+        <legend>Menu</legend>
+        <h1>Wstęp do menu</h1>
+        <fieldset>
+            <style>
+                #menu {
+                    list-style-type: none;
+                    padding-left: 0px;
+                    user-select: none
+                }
+
+                #menu li {
+                    display: inline-block;
+                    border: 1px coral solid;
+                    height: 35px;
+                    width: 100px;
+                    text-align: center;
+                    line-height: 36px;
+                    cursor: pointer;
+                    margin-right: 5px;
+                }
+                #menu li:hover
+                {
+                    transition: 0.2s;
+                    background-color: coral;
+                    color: blanchedalmond;
+                }
+                #menu li:active
+                {
+                    background-color: rgb(212, 93, 50);
+                    transition: 0.05s;
+                }
+
+                #menu li:nth-of-type(1)
+                {
+                    color: lavender;
+                    background-color: seagreen;
+                    border: 5px outset;
+                    outline: 1px solid mintcream;
+                    border-radius: 5px;
+                    transition: 0.5s;
+                }
+                #menu li:nth-of-type(1):hover
+                {
+                    background-color: lavender;
+                    color: seagreen;
+                }
+            </style>
+            <h3>Menu</h3>
+            <ul id="menu">
+                <li>Home</li>
+                <li>Zaloguj się</li>
+                <li>Zarejestruj się</li>
+                <li>Opcje</li>
+            </ul>
+        </fieldset>
+    </fieldset>
+</body>
+
+</html>
