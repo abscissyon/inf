@@ -1,0 +1,31 @@
+header {grid-area: header;}
+nav {grid-area: nav;}
+main {grid-area: main}
+footer {grid-area: footer;}
+body
+{
+    margin: 0px;
+}
+.grid-container
+{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-areas: 'header header header'
+    'nav main main'
+    'footer footer footer';
+    grid-template-columns: 10% auto;
+    grid-template-rows: 10% auto 6 %;
+}
+
+.grid-container > *
+{
+    border-top: 15px solid blanchedalmond;
+    outline: 1px solid sandybrown;
+    outline-offset: -1px;
+    padding: 5px 2px 2px 5px;
+    color:peru;
+}
+
+  margin: 0px;
+}

@@ -7,7 +7,47 @@ body {
     font-family: 'Roboto', sans-serif;
     color: coral;
 }
-
+.winter 
+{
+    color: darkslategray;
+}
+.winter > *
+{
+    background-color: aliceblue;
+    border-color: seagreen;
+    border-width: 2px;
+}
+.winter code
+{
+    background-color: rgba(46, 139, 86, 0.363);
+}
+.winter fieldset > code
+{
+    border-left: 4px solid darkslategray;
+    margin-left: 4px;
+}
+.winter strong
+{
+    display: block;
+    min-width: 40%;
+    padding: 3px 2px;
+    font-style: italic;
+    background-color: lavender;
+}
+.winter strong::before
+{
+    color: seagreen;
+    content: '> ';
+    margin-right: 3px;
+}
+.winter hr
+{
+    color: seagreen;
+    margin: 20px -9.5px;
+}
+input{
+    width: 15px;
+}
 #container {
     display: flex;
     width: 100vw;
@@ -75,14 +115,10 @@ body>fieldset {
     border-top: 3px double;
 }
 
-body>fieldset>legend {
-    font-size: 15px;
-    font-weight: bold;
-    letter-spacing: 5px;
-}
-
 code {
     margin: 0;
+    padding: 2px 3px;
+    margin: 0px 1px;
 }
 
 fieldset>code,
@@ -98,10 +134,13 @@ fieldset h1 {
 }
 
 legend {
+ 
     margin-left: -8px;
     padding: 0px 10px;
-    letter-spacing: 3px;
+    font-size: 18px;
     text-transform: lowercase;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 #img-top {

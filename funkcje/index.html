@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="winter">
+    <fieldset>
+        <h1>Funkcje</h1>
+        <p>Funkcja w języku JavaScript to jedno lub więcej poleceń zgrupowanych w całość za pomocą nawiasów klamrowych.
+        </p>
+        <p>Taka funkcja może zawierać listę argumentów umieszczonych przy wywoływaniu w nawiazach klamrowych oraz może
+            zwracać wartość.</p>
+        <p>Do funkcji odwołujemy się poprzez jej ustaloną nazwę.</p>
+        <h2>Definiowanie funkcji</h2>
+        <p>W JavaScript można definiować własne funkcje. Definicja funkcji musi zawierać:</p>
+        <ul>
+            <li>słowo kluczowe <code>function</code></li>
+            <li>nazwę funkcji</li>
+            <li>nawiasy okrągłe</li>
+            <li>treść funkcji w nawiasach klamrowych</li>
+        </ul>
+        <p>Składnia: </p>
+        <code>
+        <pre>function nazwa_funkcji(argumenty)
+{
+    instrukcje
+}   </pre>
+</code>
+        <p>Funkcja zawsze zwraca jakąś wartość, jeśli nie zostanie ona podana z wykorzystaniem instrukcji
+            <code>return</code> zostanie zwrócona wartość undefined.
+        </p>
+        <p>Przykładowa funkcja:</p>
+        <code>
+        <pre>function suma(a,b)
+{
+    return a+b;
+}</pre>
+    </code>
+        <h2>Wywołanie funkcji</h2>
+        <p>Wykonianie funkcji następuje gdy gdzieś ją wywołujemy.</p>
+        <p>Przykłady:</p>
+        <ul>
+            <li>kliknięcie w przycisk</li>
+            <li>podanie w kodzie skryptu nazwy funkcji</li>
+            <li>wywołanie automatyczne</li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>Skrypt</legend>
+        <h2>Przykładowa funkcja</h2>
+        <p>Funkcja suma:</p>
+        <code>
+<pre>
+function suma(a, b)
+{
+    let c = a + b;
+    return c;
+}
+</pre>
+        </code>
+
+        <script>
+            function suma(a, b) {
+                let c = a + b;
+                return c;
+            }
+            document.write("<p>Wynik:</p><strong>" + suma(5, 3) + "</strong>");
+        </script>
+
+        <hr>
+        <h2>Zadanie</h2>
+        <p>Zdefiniuj funkcję o nazwie <code>wynik</code> obliczającą różnicę dwóch liczb i zwracającą ją jako wartość
+            zmiennej <code>s</code>.</p>
+        <p>Wywołaj funkcję z argumentami 19 i 7 w wyrażeniu w którym obliczona zostanie wartość zmiennej
+            <code>suma</code> (jako wartość zmiennej <code>suma</code> wywołujemy funkcję <code>wynik</code>)</p>
+        <br>
+        <p>Funkcja wynik:</p>
+
+        <code>
+<pre>
+function wynik(a, b)
+{
+    let s = a - b;
+    return s;    
+} 
+</pre>
+        </code>
+        <script>
+            function roznica(a, b) {
+                let s = a - b;
+                return s;
+            }
+            let _suma = suma(roznica(19, 7), 27);
+            document.write("<p>Wynik:</p><strong>" + _suma + "</strong>");
+        </script>
+
+        <hr>
+        <h2>Zadanie</h2>
+        <p>Napisz skrypt z funkcją która obliczy różnicę iloczynu i ilorazu podanych przed użytkownika</p>
+
+        <code>
+            <pre>
+function iloczyn(a, b) {
+    return a * b;
+}
+
+function iloraz(a, b) {
+    return a / b;
+}
+
+let _iloczyn = iloczyn(a, b);
+let _iloraz = iloraz(a, b);
+let wynik = roznica(_iloczyn, _iloraz) 
+</pre>
+        </code>
+        <br>
+        <p>Wartości:</p>
+        <label for="input1">A: </label>
+        <input id="input1" type="text">
+
+        <label for="input2">B: </label>
+        <input id="input2" type="text">
+        <script>
+            function iloczyn(a, b) {
+                return a * b;
+            }
+
+            function iloraz(a, b) {
+                return a / b;
+            }
+
+            function refresh(){
+                let a = parseInt(document.getElementById("input1").value);
+                let b = parseInt(document.getElementById("input2").value);
+                let _iloczyn = iloczyn(a, b);
+                let _iloraz = iloraz(a, b);
+                let wynik = roznica(_iloczyn, _iloraz) 
+                document.getElementById("wynik-2").innerHTML = _iloczyn + " - " + _iloraz+ " = " + wynik;
+            }
+            document.getElementById("input1").oninput = refresh;
+            document.getElementById("input2").oninput = refresh;
+        </script>
+        <p>Wynik:</p>
+        <strong id="wynik-2"></strong>
+    </fieldset>
+</body>
+
+</html>
