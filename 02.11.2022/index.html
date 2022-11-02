@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body  class="moon">
+    <fieldset>
+        <h1>Menu</h1>
+        <p>Menu budujemy na <i>liście</i> stworzonej w dokumencie HTML.</p>
+        <p>Lista taka powinna zawierać linki do podstron naszej strony lub linki zewnętrzne.</p>
+        <hr>
+        <p>Na przygotowanej liście za pomocą arkuszy stylów należy:</p>
+        <ul>
+            <li>usunąć punktory</li>
+            <li>wyzerować marginesy</li>
+            <li>zadeklarować wyświetlanie listy w bloku</li>
+            <li>określić szerokość bloku</li>
+        </ul>  
+        <h3>Menu poziome</h3>
+        <p>Menu poziome również tworzymy na poziomie listy nieuporządkowanej.</p>
+        <p>Domyślnie, lista tworzona jest w układzie pionowym. Układ poziomy możemy uzyskać na dwa sposoby.</p>
+        <ul style="list-style-type: dash; padding-left: 20px;">
+            <li>wyświetlając kolejne elementy listy w linii (<code>display: inline;</code>)</li>
+            <li>ustawiając pływanie dla każdej pozycji listy (<code>float</code>)</li>
+        </ul>
+        <p>Przy formatowaniu z floatem kolejnemu elementowi należy dodać atrybut <code>clear</code>.</p>
+    </fieldset>
+
+    <fieldset>
+
+        <legend>Zadanie</legend>
+
+        <h1>Witamy</h1>
+        <h3>W linii</h3>
+        <ul class="menu-hoz">
+            <li><a href="zadanie/aktualnosci.html">Aktualności</a></li>
+            <li><a href="zadanie/informacje.html">Informacje</a></li>
+            <li><a href="zadanie/szkolenia.html">Szkolenia</a></li>
+            <li><a>Login</a></li>
+            <li><a>Rejestracja</a></li>
+        </ul>
+
+        <h3>Z floatem</h3>
+        <ul class="menu-hoz menu-hoz-float">
+            <li><a href="zadanie/aktualnosci.html">Aktualności</a></li>
+            <li><a href="zadanie/informacje.html">Informacje</a></li>
+            <li><a href="zadanie/szkolenia.html">Szkolenia</a></li>
+            <li><a>Login</a></li>
+            <li><a>Rejestracja</a></li>
+        </ul>
+        <br>
+        <h1>Witamy</h1>
+        <ul class="menu-vert">
+            <li><a href="zadanie/aktualnosci.html">Aktualności</a></li>
+            <li><a href="zadanie/informacje.html">Informacje</a></li>
+            <li><a href="zadanie/szkolenia.html">Szkolenia</a></li>
+            <li><a>Login</a></li>
+            <li><a>Rejestracja</a></li>
+        </ul>
+    </fieldset>
+</body>
+</html>

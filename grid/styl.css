@@ -1,0 +1,87 @@
+header {
+    grid-area: header;
+}
+
+#mecze {
+    grid-area: mecze;
+}
+
+main {
+    grid-area: main;
+}
+
+#left {
+    grid-area: left;
+}
+
+#right {
+    grid-area: right;
+}
+
+body {
+    font-family: tahoma;
+    background-color: crimson;
+    margin: 0px;
+}
+
+h2 {
+    text-align: center;
+    letter-spacing: 7px;
+    text-transform: capitalize;
+}
+
+.grid-container {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas: 'header header'
+        'mecze mecze'
+        'main main'
+        'left right';
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 370px 200px 50px 230px;
+}
+
+header {
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+header > img
+{
+    height: 80%;
+    height: 80%;
+}
+
+.mecz {
+    width: 200px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #dc133d;
+    color: white;
+    text-align: center;
+    display: inline-block;
+}
+.mecz:hover
+{
+    border-color: white;
+}
+main {
+    background-color: whitesmoke;
+    width: 100%;
+}
+
+#left {
+    background-color: whitesmoke;
+
+}
+
+#right {
+    background-color: whitesmoke;
+ text-align: right;
+}
+#right > img
+{
+    width: 150px;
+}

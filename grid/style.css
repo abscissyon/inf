@@ -15,7 +15,7 @@ body
     'nav main main'
     'footer footer footer';
     grid-template-columns: 10% auto;
-    grid-template-rows: 10% auto 6 %;
+    grid-template-rows: 10% auto 6%;
 }
 
 .grid-container > *
@@ -25,7 +25,4 @@ body
     outline-offset: -1px;
     padding: 5px 2px 2px 5px;
     color:peru;
-}
-
-  margin: 0px;
 }

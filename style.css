@@ -45,6 +45,66 @@ body {
     color: seagreen;
     margin: 20px -9.5px;
 }
+
+.moon
+{
+    color:mediumslateblue;
+}
+.moon > *
+{
+    background-color: azure;
+    border-color: mediumslateblue;
+    border-width: 2px;
+}
+.moon *
+{
+    border-color: mediumslateblue !important;
+}
+.moon h1
+{
+    text-shadow: 125px 2px 2px rgba(25, 25, 112, 0.1);
+}
+.moon h1::first-letter
+{
+    font-size: larger;
+}
+.moon a:link
+{
+    color: mediumslateblue;
+}
+.moon a:visited
+{
+    color: blueviolet;
+}
+.moon hr
+{
+    border: 0;
+    height: 1px;
+    margin: 20px -9.5px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(124, 104, 238, 0.822) 3%, rgba(0, 0, 0, 0));
+}
+.moon fieldset > code
+{
+    background-color: rgba(147, 112, 216, 0.253);
+}
+.moon strong
+{
+    color:slateblue;
+    font-weight: normal;
+    display: block;
+    min-width: 40%;
+    padding: 3px 2px;
+    font-style: italic;
+    background-color: lavender;
+}
+.moon strong::before
+{
+    color: slateblue;
+    content: '> ';
+    margin-right: 3px;
+}
+/* Styles */
+
 input{
     width: 15px;
 }
@@ -304,4 +364,90 @@ footer {
 
 .clear * {
     all: initial;
+}
+
+.menu-hoz
+{
+    list-style-type: none;
+    padding-left: 0px;
+}
+.menu-hoz li
+{
+    display: inline-block;
+    border: 1px solid coral;
+}
+.menu-hoz li > a
+{
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 7px 10px;
+    display: block;
+}
+.menu-hoz a:hover
+{
+    color:azure !important;
+    background-color: mediumslateblue;
+}
+
+.menu-hoz-float
+{
+    display: initial;
+}
+.menu-hoz-float > li
+{
+    float: left;
+    margin-right: 3px;
+}
+.menu-hoz-float::after
+{
+    display: block;
+    content: '';
+    clear: both;
+}
+.menu-vert
+{
+    display: block;
+    width:93.5px;
+    list-style-type: none;
+    padding-left: 0px;
+}
+.menu-vert li
+{
+    display: block;
+    position: relative;
+    text-align: justify;
+    margin-bottom: 5px;
+    transition: 0.3s;
+    border: 1px solid coral;
+    width: 100%;
+}
+.menu-vert li > a
+{
+    text-decoration: none !important;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 7px 10px;
+    display: inline-block;
+}
+.menu-vert li::after
+{
+    display: inline;
+    position: absolute;
+    right: 2px;
+    bottom:0px;
+    font-size: 24px;
+    color: white;
+    content: '⮞';
+}
+.menu-vert a:hover
+{
+    color:azure !important;
+    font-weight: normal !important;
+}
+.menu-vert li:hover
+{
+    padding-right: 10px;
+    background-color: mediumslateblue;
 }

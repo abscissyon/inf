@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="moon">
+    <fieldset>
+        <legend>Obiekty</legend>
+        <h1>Obiekty</h1>
+        <p>Język Javascript jako zorientowany obiektowo udostępnia wiele wbudowanych obiektów.</p>
+        <p>Daje również możliwość odczytywania właściwości obiektów oraz korzystania z ich metod.</p>
+        <p>Właściwości obiektu to zmienne określające jego cechy. Na przykład liczba znaków w łańcuchu, rozmiar okna.
+        </p>
+        <p>Metody to funkcje które wykonują różne operacje na obiekcie.</p>
+        <p>Do właściwości metod można się odwołać podobnie jak do zwykłych zmiennych i funkcji. Należy przed ich nazwą
+            umieścić nazwę obiektu którego są elementami.</p>
+        <p>Składnia:</p>
+        <code>obiekt.właściwość</code>
+        <br>
+        <code>obiekt.funkcja()</code>
+
+        <h3>Tworzenie obiektów</h3>
+        <p>Obiekty możemy tworzyć na dwa sposoby:</p>
+        <ul>
+            <li>używając literału</li>
+            <li>za pomocą konstruktora obiektu używając słowa kluczowego <code>new</code></li>
+        </ul>
+        <p>Aby utworzyć nowy obiekt z użyciem literału należy skorzystać z konstrukcji która zdefiniuje nazwę obiektu oraz pozwoli utworzyć jego właściwości i metody.</p>
+        <p>Ponieważ obiekty są zmiennymi które mogą zawierać wiele wartości, można utworzyć zmienną która jest obiektem.</p>
+        <p>Każda jej wartość zostanie zapisana w parze nazwa i wartość i umieszczona w nawiasach klamrowych.</p>
+        <p>Działania jakie można wykonać na takim obiekcie zostaną zdefiniowane jako metody i zapisane w postaci funkcji.</p>
+        <p>Dostęp do właściwości obiektu uzyskamy po podaniu nazwy obiektu i jego właściwości. W ten sam sposób wywołujemy metodę.</p>
+        
+        <fieldset>
+            <legend>Kod</legend>
+            <code>
+<pre>let osoba = {
+    imie: "Jan",
+    nazwisko: "Nowak",
+    zawód: "Nauczyciel",
+    print() {
+        return(this.imie + " " + this.nazwisko + ", " + this.zawód);
+    }
+    
+    document.write(osoba.print());
+}</pre>
+            </code>
+            <script>
+                let osoba = 
+                {
+                    imie: "Jan",
+                    nazwisko: "Nowak",
+                    zawód: "Nauczyciel",
+                    print()
+                    {
+                        return(this.imie + " " + this.nazwisko + ", " + this.zawód);
+                    }
+                }
+
+                document.write("<strong>" + osoba.print() + "</strong>");
+            </script>
+        </fieldset>
+    </fieldset>
+</body>
+
+</html>

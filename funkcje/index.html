@@ -67,11 +67,13 @@ function suma(a, b)
         </code>
 
         <script>
+
             function suma(a, b) {
                 let c = a + b;
                 return c;
             }
             document.write("<p>Wynik:</p><strong>" + suma(5, 3) + "</strong>");
+
         </script>
 
         <hr>
@@ -79,7 +81,8 @@ function suma(a, b)
         <p>Zdefiniuj funkcję o nazwie <code>wynik</code> obliczającą różnicę dwóch liczb i zwracającą ją jako wartość
             zmiennej <code>s</code>.</p>
         <p>Wywołaj funkcję z argumentami 19 i 7 w wyrażeniu w którym obliczona zostanie wartość zmiennej
-            <code>suma</code> (jako wartość zmiennej <code>suma</code> wywołujemy funkcję <code>wynik</code>)</p>
+            <code>suma</code> (jako wartość zmiennej <code>suma</code> wywołujemy funkcję <code>wynik</code>)
+        </p>
         <br>
         <p>Funkcja wynik:</p>
 
@@ -93,12 +96,14 @@ function wynik(a, b)
 </pre>
         </code>
         <script>
-            function roznica(a, b) {
-                let s = a - b;
-                return s;
+            {
+                function roznica(a, b) {
+                    let s = a - b;
+                    return s;
+                }
+                let _suma = suma(roznica(19, 7), 27);
+                document.write("<p>Wynik:</p><strong>" + _suma + "</strong>");
             }
-            let _suma = suma(roznica(19, 7), 27);
-            document.write("<p>Wynik:</p><strong>" + _suma + "</strong>");
         </script>
 
         <hr>
@@ -128,27 +133,103 @@ let wynik = roznica(_iloczyn, _iloraz)
         <label for="input2">B: </label>
         <input id="input2" type="text">
         <script>
-            function iloczyn(a, b) {
-                return a * b;
-            }
+            {
+                function iloczyn(a, b) {
+                    return a * b;
+                }
 
-            function iloraz(a, b) {
-                return a / b;
-            }
+                function iloraz(a, b) {
+                    return a / b;
+                }
 
-            function refresh(){
-                let a = parseInt(document.getElementById("input1").value);
-                let b = parseInt(document.getElementById("input2").value);
-                let _iloczyn = iloczyn(a, b);
-                let _iloraz = iloraz(a, b);
-                let wynik = roznica(_iloczyn, _iloraz) 
-                document.getElementById("wynik-2").innerHTML = _iloczyn + " - " + _iloraz+ " = " + wynik;
+                function refresh() {
+                    let a = parseInt(document.getElementById("input1").value);
+                    let b = parseInt(document.getElementById("input2").value);
+                    let _iloczyn = iloczyn(a, b);
+                    let _iloraz = iloraz(a, b);
+                    let wynik = roznica(_iloczyn, _iloraz)
+                    document.getElementById("wynik-2").innerHTML = _iloczyn + " - " + _iloraz + " = " + wynik;
+                }
+                document.getElementById("input1").oninput = refresh;
+                document.getElementById("input2").oninput = refresh;
             }
-            document.getElementById("input1").oninput = refresh;
-            document.getElementById("input2").oninput = refresh;
         </script>
         <p>Wynik:</p>
         <strong id="wynik-2"></strong>
+
+        <hr>
+        <h2>Zadanie</h2>
+        <h4>Suma</h4>
+
+        <script>
+            {
+                function _suma(a, b) {
+                    return a + b;
+                }
+
+                document.write("<p>Wynik:</p><strong>" + _suma(1, 2) + "</strong>");
+            }
+        </script>
+
+
+        <h4>Podstawy</h4>
+
+        <script>
+            {
+                function podstawy(a, b) {
+                    return [a - b, a / b, a * b].toString().replace(/,/g, "<br>");
+                }
+
+                document.write("<p>Wynik:</p><strong>" + podstawy(2, 5) + "</strong>");
+            }
+        </script>
+
+        <h4>Maks</h4>
+
+        <script>
+            {
+                function maks(a, b, c) {
+                    let temp;
+                    let ret;
+                    a > b ? temp = a : temp = b;
+                    temp > c ? ret = temp : ret = c;
+                    return ret;
+                }
+
+                document.write("<p>Wynik:</p><strong>" + maks(8, 2, 5) + "</strong>");
+            }
+        </script>
+
+        <h4>Wzrost</h4>
+
+        <script>
+            {
+                function wzrost(cm) {
+                    if (cm > 180) { return cm + "cm - "+ "Wysoki" }
+                    else if (cm < 150) { return cm + "cm - "+ "Niski" }
+                    else { return cm + "cm - "+ "Średni" }
+                }
+
+                document.write("<p>Wynik:</p><strong>" + wzrost(190) + "</strong>");
+            }
+        </script>
+
+        <h4>BMI</h4>
+
+        <script>
+            {
+                function bmi(cm, kg) {
+                    let bmi = ((kg / (cm * 2)) * 100).toFixed(1);
+                    
+                    if (bmi > 25) {return cm+"cm, "+kg+"kg: " + bmi +" BMI - " + "Za dużo."}
+                    else if (bmi < 18.5) {return  cm+"cm, "+kg+"kg: " + bmi +" BMI - " + "Za mało."}
+                    else {return  cm+"cm, "+kg+"kg: " + bmi +" BMI - " +  "OK!"}
+                }
+
+                document.write("<p>Wynik:</p><strong>" + bmi(180, 70) + "</strong>");
+            }
+        </script>
+
     </fieldset>
 </body>
 
